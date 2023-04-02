@@ -3,13 +3,13 @@ package com.marcelo.main.entities;
 public class Faturamento {
 
 	private String dia;
-	private String valor;
+	private Double valor;
 	
 	public Faturamento() {
 
 	}
 
-	public Faturamento(String dia, String valor) {
+	public Faturamento(String dia, Double valor) {
 		this.dia = dia;
 		this.valor = valor;
 	}
@@ -22,11 +22,11 @@ public class Faturamento {
 		this.dia = dia;
 	}
 
-	public String getValor() {
+	public Double getValor() {
 		return valor;
 	}
 
-	public void setValor(String valor) {
+	public void setValor(Double valor) {
 		this.valor = valor;
 	}
 

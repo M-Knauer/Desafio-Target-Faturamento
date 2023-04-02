@@ -28,10 +28,12 @@ public class DesafioTargetFaturamentoApplication  {
         Type list = new TypeToken<List<Faturamento>>() {}.getType();
         List<Faturamento> faturamentos = gson.fromJson(json, list);
         
-        List<Faturamento> cleanFaturamento = faturamentos.stream().filter(f -> Double.parseDouble(f.getValor()) > 0).toList();
+        List<Faturamento> cleanFaturamento = faturamentos.stream().filter(f -> f.getValor() > 0).toList();
         
         System.out.println(cleanFaturamento);
 
+        Faturamento minFaturamento = Collections.min(cleanFaturamento, Comparator.comparing(Faturamento::getValor));
+        System.out.println(minFaturamento);
 	}
  
 }
