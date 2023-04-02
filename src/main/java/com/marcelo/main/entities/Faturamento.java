@@ -32,7 +32,8 @@ public class Faturamento {
 
 	@Override
 	public String toString() {
-		return "Faturamento [dia=" + dia + ", valor=" + valor + "]";
+		return "dia: " + dia + "\n"
+			+ "valor: " + valor + "\n";
 	}
 	
 }
